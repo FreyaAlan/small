@@ -1,0 +1,22 @@
+// C语言实验报告.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
+//
+#include <stdio.h>
+int main()
+{
+	int i, byear, tyear, count = 0;
+	printf("Input your birth year:");
+	scanf_s("%d", &byear);
+	printf("Input this year:");
+	scanf_s("%d", &tyear);
+	for (i = byear; i <= tyear; i++)
+	{
+		if ((i % 4 == 0 && i % 100 != 0) || i % 400 == 0)
+		{
+			printf("%d\n", i);
+			count++;
+		}
+	}
+	printf("count=%d\n", count);
+	printf("20194241 Fang Jiabin");
+	return 0;
+}
